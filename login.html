@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Golden Fork Login</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://tse4.mm.bing.net/th/id/OIP.nBh3UOUuYtFfOTH9vnKY4QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    />
+  </head>
+
+  <body
+    class="bg-[#0F0F0F] text-white min-h-screen flex items-center justify-center px-6"
+  >
+    <div
+      class="w-full max-w-md bg-[#1A1A1A] border border-[#D4AF37]/20 rounded-3xl p-10 shadow-2xl"
+    >
+      <div class="text-center mb-8">
+        <i class="fas fa-utensils text-5xl text-[#D4AF37] mb-4"></i>
+
+        <h1 class="text-5xl font-bold text-[#D4AF37]">Login</h1>
+
+        <p class="text-gray-400 mt-3">Welcome back to Golden Fork</p>
+      </div>
+
+      <form id="login-form" class="space-y-5">
+        <input
+          id="email"
+          type="email"
+          placeholder="Email Address"
+          class="w-full p-4 rounded-xl bg-[#0F0F0F] border border-[#D4AF37]/20 focus:border-[#D4AF37] outline-none"
+        />
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          class="w-full p-4 rounded-xl bg-[#0F0F0F] border border-[#D4AF37]/20 focus:border-[#D4AF37] outline-none"
+        />
+
+        <div class="flex justify-between items-center text-sm">
+          <label class="flex items-center gap-2">
+            <input id="remember" type="checkbox" />
+
+            Remember Me
+          </label>
+
+          <a href="forgot-password.html" class="text-[#D4AF37]">
+            Forgot Password?
+          </a>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-[#D4AF37] text-black py-4 rounded-xl font-bold hover:scale-105 transition"
+        >
+          Login
+        </button>
+      </form>
+
+      <p class="text-center mt-6 text-gray-400">
+        Don't have an account?
+
+        <a href="register.html" class="text-[#D4AF37]"> Register </a>
+      </p>
+    </div>
+
+    <!-- Success Modal -->
+
+    <div
+      id="success-modal"
+      class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#1A1A1A] border border-[#D4AF37]/20 p-8 rounded-3xl text-center"
+      >
+        <i class="fa-solid fa-circle-check text-6xl text-[#D4AF37] mb-4"></i>
+
+        <h2 class="text-3xl font-bold text-[#D4AF37] mb-3">Login Successful</h2>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+
+    <div
+      id="error-modal"
+      class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#1A1A1A] border border-red-500/30 p-8 rounded-3xl text-center"
+      >
+        <i class="fa-solid fa-circle-xmark text-6xl text-red-500 mb-4"></i>
+
+        <h2 class="text-3xl font-bold text-red-500 mb-3">Login Failed</h2>
+
+        <p class="text-gray-300">Wrong Email Or Password</p>
+
+        <button
+          onclick="closeErrorModal()"
+          class="mt-5 bg-red-500 px-6 py-3 rounded-xl"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

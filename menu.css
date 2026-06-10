@@ -1,0 +1,22 @@
+@keyframes goldenGlow {
+  0% {
+    box-shadow: 0 0 5px #d4af37;
+    border-color: #d4af37;
+  }
+
+  50% {
+    box-shadow:
+      0 0 20px #d4af37,
+      0 0 40px #d4af37;
+    border-color: #f4d03f;
+  }
+
+  100% {
+    box-shadow: 0 0 5px #d4af37;
+    border-color: #d4af37;
+  }
+}
+
+.special-offer {
+  animation: goldenGlow 2.5s infinite ease-in-out;
+}

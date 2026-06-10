@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Golden Fork Register</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://tse4.mm.bing.net/th/id/OIP.nBh3UOUuYtFfOTH9vnKY4QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    />
+  </head>
+
+  <body
+    class="bg-[#0F0F0F] text-white min-h-screen flex items-center justify-center px-6"
+  >
+    <div
+      class="w-full max-w-md bg-[#1A1A1A] border border-[#D4AF37]/20 rounded-3xl p-10"
+    >
+      <div class="text-center mb-8">
+        <i class="fas fa-user-plus text-5xl text-[#D4AF37] mb-4"></i>
+
+        <h1 class="text-5xl font-bold text-[#D4AF37]">Register</h1>
+
+        <p class="text-gray-400 mt-3">Create your Golden Fork account</p>
+      </div>
+
+      <form id="register-form" class="space-y-5">
+        <input
+          id="username"
+          type="text"
+          placeholder="Username"
+          class="w-full p-4 rounded-xl bg-[#0F0F0F] border border-[#D4AF37]/20 outline-none focus:border-[#D4AF37]"
+        />
+
+        <input
+          id="email"
+          type="email"
+          placeholder="Email Address"
+          class="w-full p-4 rounded-xl bg-[#0F0F0F] border border-[#D4AF37]/20 outline-none focus:border-[#D4AF37]"
+        />
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          class="w-full p-4 rounded-xl bg-[#0F0F0F] border border-[#D4AF37]/20 outline-none focus:border-[#D4AF37]"
+        />
+
+        <input
+          id="confirm-password"
+          type="password"
+          placeholder="Confirm Password"
+          class="w-full p-4 rounded-xl bg-[#0F0F0F] border border-[#D4AF37]/20 outline-none focus:border-[#D4AF37]"
+        />
+
+        <button
+          type="submit"
+          class="w-full bg-[#D4AF37] text-black py-4 rounded-xl font-bold hover:scale-105 transition"
+        >
+          Create Account
+        </button>
+      </form>
+
+      <p class="text-center mt-6 text-gray-400">
+        Already have an account?
+
+        <a href="login.html" class="text-[#D4AF37]"> Login </a>
+      </p>
+    </div>
+
+    <div
+      id="register-modal"
+      class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#1A1A1A] border border-[#D4AF37]/20 p-8 rounded-3xl text-center max-w-md w-[90%]"
+      >
+        <h2
+          id="register-modal-title"
+          class="text-3xl font-bold text-[#D4AF37] mb-4"
+        >
+          Success
+        </h2>
+
+        <p id="register-modal-text" class="text-gray-300 mb-6">Message</p>
+
+        <button
+          onclick="closeRegisterModal()"
+          class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-bold hover:scale-105 transition"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="register.js"></script>
+  </body>
+</html>

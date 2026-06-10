@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://tse4.mm.bing.net/th/id/OIP.nBh3UOUuYtFfOTH9vnKY4QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>Golden Fork Profile</title>
+  </head>
+  <body class="max-w-7xl mx-auto bg-[#0F0F0F] text-white rounded-xl">
+    <!-- header -->
+    <header>
+      <nav
+        class="flex flex-col xl:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-6 gap-6"
+      >
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="flex items-center gap-3 text-[#D4AF37] hover:text-[#F4D03F] transition-all duration-300 text-4xl md:text-7xl font-bold"
+        >
+          <i class="fas fa-utensils"></i>
+          Golden Fork
+        </a>
+
+        <!-- Navigation -->
+        <div class="flex items-center gap-8">
+          <ul
+            class="flex flex-wrap justify-center gap-4 md:gap-8 text-lg md:text-2xl text-gray-200"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="relative hover:text-[#D4AF37] transition duration-300"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="menu.html"
+                class="relative hover:text-[#D4AF37] transition duration-300"
+              >
+                Menu
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="contact.html"
+                class="relative hover:text-[#D4AF37] transition duration-300"
+              >
+                Contact
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="about.html"
+                class="relative hover:text-[#D4AF37] transition duration-300"
+              >
+                About
+              </a>
+            </li>
+          </ul>
+
+          <!-- Cart -->
+          <a
+            href="order.html"
+            class="relative text-[#D4AF37] text-2xl hover:text-[#F4D03F] hover:scale-110 transition-all duration-300"
+          >
+            <i class="fas fa-cart-shopping"></i>
+
+            <span
+              id="cart-count"
+              class="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center"
+            >
+              0
+            </span>
+          </a>
+          <a
+            href="profile.html"
+            class="text-[#D4AF37] text-2xl hover:text-[#F4D03F] hover:scale-110 transition-all duration-300 border-b-2 border-[#D4AF37]"
+          >
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!--  -->
+    <div
+      class="bg-[#0F0F0F] border border-[#D4AF37]/20 rounded-2xl p-8 mb-8 text-center shadow-lg shadow-[#D4AF37]/10"
+    >
+      <h2 class="text-3xl font-bold text-[#D4AF37] mb-6">
+        Current Information
+      </h2>
+
+      <div class="space-y-4">
+        <p class="text-lg">
+          <span class="text-[#D4AF37] font-bold">Name</span>
+          <br />
+          <span id="current-name" class="text-white"></span>
+        </p>
+
+        <p class="text-lg">
+          <span class="text-[#D4AF37] font-bold">Email</span>
+          <br />
+          <span id="current-email" class="text-white break-all"></span>
+        </p>
+      </div>
+    </div>
+    <!--  -->
+    <section class="max-w-3xl mx-auto px-6 py-24">
+      <div class="bg-[#1A1A1A] border border-[#D4AF37]/20 rounded-3xl p-10">
+        <h1 class="text-5xl font-bold text-[#D4AF37] text-center mb-10">
+          My Profile
+        </h1>
+
+        <div class="space-y-5">
+          <input
+            id="new-name"
+            type="text"
+            placeholder="New Name"
+            class="w-full bg-[#0F0F0F] border border-[#D4AF37]/20 rounded-xl p-4"
+          />
+
+          <button
+            onclick="changeName()"
+            class="w-full bg-[#D4AF37] text-black py-4 rounded-xl font-bold"
+          >
+            Change Name
+          </button>
+
+          <input
+            id="new-email"
+            type="email"
+            placeholder="New Email"
+            class="w-full bg-[#0F0F0F] border border-[#D4AF37]/20 rounded-xl p-4"
+          />
+
+          <button
+            onclick="changeEmail()"
+            class="w-full bg-[#D4AF37] text-black py-4 rounded-xl font-bold"
+          >
+            Change Email
+          </button>
+
+          <input
+            id="new-password"
+            type="password"
+            placeholder="New Password"
+            class="w-full bg-[#0F0F0F] border border-[#D4AF37]/20 rounded-xl p-4"
+          />
+
+          <button
+            onclick="changePassword()"
+            class="w-full bg-[#D4AF37] text-black py-4 rounded-xl font-bold"
+          >
+            Change Password
+          </button>
+
+          <button
+            onclick="logout()"
+            class="w-full bg-red-500 text-white py-4 rounded-xl font-bold"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <div
+      id="success-modal"
+      class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-[#1A1A1A] border border-[#D4AF37]/20 p-8 rounded-3xl text-center max-w-md w-[90%]"
+      >
+        <i class="fa-solid fa-circle-check text-6xl text-[#D4AF37] mb-4"></i>
+
+        <h2 id="success-title" class="text-3xl font-bold text-[#D4AF37] mb-3">
+          Success
+        </h2>
+
+        <p id="success-text" class="text-gray-300 mb-6">
+          Changes saved successfully.
+        </p>
+
+        <button
+          onclick="closeSuccessModal()"
+          class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-bold hover:scale-105 transition"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer
+      class="border-t border-[#D4AF37]/20 mt-20 items-center flex justify-center"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- Brand -->
+          <div
+            class="hover:scale-105 hover:-translate-y-1 transition-all duration-300 justify-self-center text-center"
+          >
+            <h3 class="text-3xl font-bold text-[#D4AF37] mb-4">Golden Fork</h3>
+
+            <p class="text-gray-400 leading-relaxed max-w-xs">
+              Experience luxury dining with premium ingredients, exceptional
+              service, and unforgettable flavors.
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div
+            class="hover:scale-105 hover:-translate-y-1 transition-all duration-300 justify-self-center space-y-3 text-gray-400 flex flex-col items-center"
+          >
+            <h4 class="text-xl font-semibold text-[#D4AF37] mb-4">
+              Quick Links
+            </h4>
+
+            <ul class="space-y-3 text-gray-400">
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-[#D4AF37] transition-all duration-300"
+                >
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="menu.html"
+                  class="hover:text-[#D4AF37] transition-all duration-300"
+                >
+                  Menu
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-[#D4AF37] transition-all duration-300"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div
+            class="hover:scale-105 hover:-translate-y-1 transition-all duration-300 text-center"
+          >
+            <h4 class="text-xl font-semibold text-[#D4AF37] mb-4">Follow Us</h4>
+
+            <div class="flex justify-center gap-5 text-2xl">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#D4AF37] transition-all duration-300 hover:scale-110"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#D4AF37] transition-all duration-300 hover:scale-110"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#D4AF37] transition-all duration-300 hover:scale-110"
+              >
+                <i class="fab fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+
+        <div class="border-t border-[#D4AF37]/10 mt-12 pt-8 text-center">
+          <p class="text-gray-500">© 2026 Golden Fork. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+    <script src="profile.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
